@@ -9,11 +9,11 @@ import com.adaming.entities.CompteCourant;
 import com.adaming.repositories.CompteCourantRepository;
 
 @Service
-public class CCServiceImpl implements ICCService{
+public class CCServiceImpl implements ICCService {
 
 	@Autowired
 	private CompteCourantRepository ccRep;
-	
+
 	@Override
 	public List<CompteCourant> getAll() {
 		return ccRep.findAll();
@@ -21,7 +21,7 @@ public class CCServiceImpl implements ICCService{
 
 	@Override
 	public CompteCourant findOne(Long id) {
-		return ccRep.findById(id).get();
+		return ccRep.getOne(id);
 	}
 
 	@Override

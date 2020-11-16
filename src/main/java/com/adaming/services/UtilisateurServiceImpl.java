@@ -21,7 +21,7 @@ public class UtilisateurServiceImpl implements IUtilisateurService{
 
 	@Override
 	public Utilisateur findOne(Long id) {
-		return uRep.findById(id).get();
+		return uRep.getOne(id);
 	}
 
 	@Override

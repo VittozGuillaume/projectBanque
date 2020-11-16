@@ -21,7 +21,7 @@ public class CEServiceImpl implements ICEService{
 
 	@Override
 	public CompteEpargne findOne(Long id) {
-		return ceRep.findById(id).get();
+		return ceRep.getOne(id);
 	}
 
 	@Override
